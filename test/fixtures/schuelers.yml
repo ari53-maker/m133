@@ -1,0 +1,53 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  integer,: MyString
+  klasse: MyString
+  references,: MyString
+  name: MyString
+  string,: MyString
+  firstname: MyString
+  string,: MyString
+  email: MyString
+  string,: MyString
+  age: MyString
+  integer,: MyString
+  sex: MyString
+  boolean,: MyString
+  des1: MyString
+  string,: MyString
+  des2: MyString
+  string,: MyString
+  des3: MyString
+  string,: MyString
+  created_at: MyString
+  datetime,: MyString
+  updated_at: MyString
+  datetime: MyString
+
+two:
+  id: MyString
+  integer,: MyString
+  klasse: MyString
+  references,: MyString
+  name: MyString
+  string,: MyString
+  firstname: MyString
+  string,: MyString
+  email: MyString
+  string,: MyString
+  age: MyString
+  integer,: MyString
+  sex: MyString
+  boolean,: MyString
+  des1: MyString
+  string,: MyString
+  des2: MyString
+  string,: MyString
+  des3: MyString
+  string,: MyString
+  created_at: MyString
+  datetime,: MyString
+  updated_at: MyString
+  datetime: MyString

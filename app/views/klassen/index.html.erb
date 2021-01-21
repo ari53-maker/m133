@@ -1,0 +1,69 @@
+
+<div class="container">
+<h3>Klassen</h3>
+<table class="table">
+  <col class="col-sm-1">
+  <tr>
+    <%= form_for :klasse, url: {action: "create"}, class: "form-horizontal" do |g| %>
+    <tr>
+      <td><%=g.label :klassenname, "Klassennamen"%></td>
+      <td>
+        <%= g.text_field :klassenname, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%=g.label :code, "CODE"%></td>
+      <td>
+        <%= g.text_field :code, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%=g.label :des1, "Schulhaus"%></td>
+      <td>
+        <%= g.text_field :des1, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%=g.label :des2, "Schulbeginn"%></td>
+      <td>
+        <%= g.text_field :des2, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%=g.label :des3, "Schulende"%></td>
+      <td>
+        <%= g.text_field :des3, class: "form-control" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= g.submit "Save Schueler ", class: "btn btn-success"%>  <% end %></td><td></td>
+    </tr>
+</table>
+<table class="table">
+  <col class="col-sm-1">
+  <col class="col-sm-1">
+  <col class="col-sm-2">
+  <col class="col-sm-2">
+  <col class="col-sm-2">
+  <col class="col-sm-1">
+
+<tr><td><h4>Klasse</h4></td>
+  <td><h4>CODE</h4></td>
+<td><h4>Schuhaus</h4></td>
+<td><h4>Schulbeginn</h4></td>
+<td><h4>Schulende</h4></td>
+
+</tr>
+<% @klassen.each do |g| %>
+    <tr>
+      <td><%= g.klassenname %></td>
+      <td><%= g.code %></td>
+      <td><%= g.des1 %></td>
+      <td><%= g.des2 %></td>
+      <td><%= g.des3 %></td>
+      <td><%= link_to "Delete", klassen_path(g), method: :delete, data: { confirm: "Delete Flight?" } , class: "btn btn-danger"%></td>
+    </tr>
+  <% end %>
+<tr><td>Number of Klassen: <%=@NumberOfKlassen%></td><td></td></tr>
+<tr><td><%= link_to "Schüler", schuelers_path, class: "btn btn-success"%></td><td></td></tr>
+</table>
